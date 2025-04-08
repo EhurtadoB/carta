@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Ingrid</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #ffeef2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      perspective: 1000px;
+    }
+
+    .card {
+      width: 700px;
+      height: 800px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+
+    .card.open {
+      transform: rotateY(180deg);
+    }
+
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .front {
+      background: #ffb6c1;
+      color: white;
+      padding: 20px;
+    }
+
+    .back {
+      background: white;
+      color: #333;
+      transform: rotateY(180deg);
+      padding: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4em;
+    }
+
+    .message {
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.6;
+      height: 100%;
+    }
+
+    .message p {
+      font-size: 23px;
+    } 
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="card" id="card">
+    <div class="front">
+      <h1>💌 Para Ingrid</h1>
+      <p>Haz click</p>
+      <button onclick="document.getElementById('card').classList.add('open')">Abrir</button>
+    </div>
+    <div class="back">
+      <h2>Querida Ingrid,</h2>
+      <div class="message">
+        <p>
+          Hoy quiero dedicarte estas palabras llenas de cariño, porque te lo mereces todo y más.
+          Eres una persona increíble: amable, cariñosa, colaboradora y con un corazón que no le cabe en el pecho.
+        </p>
+        <p>
+          Tu risa... aunque sea fea (sí, lo dije), es tan contagiosa que se vuelve el mejor sonido del día.
+          Porque reír contigo no es solo reír, es curarse el alma.
+        </p>
+        <p>
+          A pesar de los momentos tristes que has enfrentado, nunca has dejado de brillar.
+          Y en medio de todo, has sabido vivir, disfrutar, compartir… y sí, también tomarte tu traguito como se debe 🍷😉.
+        </p>
+        <p>
+          Lo que más admiro de ti es que estás para las que sea. Siempre firme, siempre leal, siempre tú.
+          No sabes cuánto valor tiene eso en este mundo. ¡Gracias por ser como eres!
+        </p>
+        <p>
+          Te deseo todo lo bueno de la vida, momentos felices, amores sinceros y muchas razones para reír (aunque sea con esa risa tuya tan única).
+        </p>
+        <p><strong>¡Felicidades, Ingrid! Te quiero muchísimo.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
